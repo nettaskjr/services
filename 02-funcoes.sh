@@ -19,7 +19,7 @@ function doExecutar() {
     ati=$2 # flag de execucao 1 executa, 0 não executa
     app=$3 # aplicativo que é usado para a execucao do script
     if [ "${ati}" -eq 1 ]; then
-        [ "$(doInstalado ${app})" -eq "1" ] && echo "Executando.: ${exe} ..." && sh -c "${exe}" && doSeparador
+        [ "$(doInstalado ${app})" -eq "1" ] && echo "Executando.: ${exe} ..." && sudo sh -c "${exe}" && doSeparador
     fi
 }
 
