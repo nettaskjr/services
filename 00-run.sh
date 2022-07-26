@@ -1,14 +1,5 @@
 #!/bin/bash
 
-# ----        ---- #
-# ---- TESTES ---- #
-# ----        ---- #
-
-# ---- tem internet
-goo="http://www.google.com.br/intl/en_com/images/srpr/logo1w.png"
-arq=$(basename "${goo}")
-wget -q "${goo}" && [ -s "${arq}" ] && rm "${arq}" || { echo "Necessita de internet..."; exit 1; } 
-
 export gmsg="${1}" # mensagem que será apresentada no prompt
 export gdns="${2}" # endereco de dns que para o site ex.: example.com.br
 export gusr="${3}" # usuário do /home que será utilizado para a distro (para debian o padrao é: admin )
