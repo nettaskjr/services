@@ -13,6 +13,7 @@ if [ "${executa}" -eq 1 ]; then
     chown "${gusr}"."${gusr}" "${gdir}/wp-docker"
     cp "${gdir}/arquivos/wp-docker-compose.yml ${gdir}/wp-docker/docker-compose.yml"
     cd "${gdir}/wp-docker"
+    adduser "${gdir}" docker
     docker-compose up -d
 
 fi
