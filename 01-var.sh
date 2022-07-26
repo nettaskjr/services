@@ -6,4 +6,4 @@ export gdir="${ghome}/projetos"
 # ----                   ---- #
 # ---- pasta de projetos ---- #
 # ----                   ---- #
-[ ! -d "${gdir}" ] && mkdir "${gdir}" # se não existe a pasta projetos, crie
+[ ! -d "${gdir}" ] && mkdir "${gdir}" # se não existe a pasta projetos, crie!
