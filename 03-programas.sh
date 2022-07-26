@@ -22,7 +22,7 @@ if [ "${executa}" -eq 1 ]; then
     apps="${apps} wget"             # ferramenta de download
     apps="${apps} git"              # git né!
     apps="${apps} docker.io"        # container
-    apps="${apps} docker compose"   # rotinas usando docker
+    apps="${apps} docker-compose"   # rotinas usando docker
 
     doApt "${apps}"
 fi
