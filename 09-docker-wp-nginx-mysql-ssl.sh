@@ -6,4 +6,4 @@ name="docker-wp-nginx-mysql-ssl"
 
 doSeparador "Instalando ${name}"
 
-docker-compose -f "arquivos/${name}.yml" up -d
+sudo docker-compose -f "arquivos/${name}.yml" up -d
