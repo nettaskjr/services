@@ -9,9 +9,9 @@ executa=1
 if [ "${executa}" -eq 1 ]; then
     doSeparador "Instalando wordpress-docker..."
 
-    mkdir "${gdir}/wordpress-docker"
-    cp "${gdir}/arquivos/wordpress-docker-compose.yml ${gdir}/wordpress-docker/docker-compose.yml"
-    cd "${gdir}/wordpress-docker"
+    mkdir "${gdir}/wp-docker"
+    cp "${gdir}/arquivos/wp-docker-compose.yml ${gdir}/wp-docker/docker-compose.yml"
+    cd "${gdir}/wp-docker"
     docker-compose up -d
 
 fi
