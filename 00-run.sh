@@ -24,11 +24,12 @@ export gusr="${3}" # usuário do /home que será utilizado para a distro (para d
 
 while true; do
     case "${4}" in
-        --java )   ./04-java.sh; shift ;;
-        --nodejs ) ./05-nodejs.sh; shift ;;
-        --ionic )  ./06-ionic.sh; shift ;;
-        --nginx )  ./07-nginx.sh; shift ;;
-        --vault )  ./09-vault.sh; shift ;;
+        --java )        ./04-java.sh; shift ;;
+        --nodejs )      ./05-nodejs.sh; shift ;;
+        --ionic )       ./06-ionic.sh; shift ;;
+        --nginx )       ./07-nginx.sh; shift ;;
+        --vault )       ./08-vault.sh; shift ;;
+        --wp-docker)    ./09-wp-docker.sh; shift;;
         * ) break ;;
     esac
 done
