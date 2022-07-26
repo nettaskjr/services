@@ -12,7 +12,7 @@ executa=1
 
 doSeparador "Updatedb..."
 
-exec="sudo updatedb" #atualiza base do locate
+exec="updatedb" #atualiza base do locate
 
     doExecutar "${exec}" "0" "locate"
 
@@ -24,7 +24,7 @@ doSeparador "Colocando myfetch no inicio..."
 
 arq="/etc/profile.d/mymotd.sh"
 
-exec="sudo echo 'neofetch' > ${arq} && sudo chmod +x ${arq}"
+exec="echo 'neofetch' > ${arq} && sudo chmod +x ${arq}"
 
     doExecutar "${exec}" "${executa}" "neofetch"    
 
