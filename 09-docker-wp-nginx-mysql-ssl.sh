@@ -4,12 +4,7 @@
 . 02-funcoes.sh
 
 name="docker-wp-nginx-mysql-ssl"
-install="${gdir}/${name}"
 
 doSeparador "Instalando ${name}"
 
-[ ! -d "${install}" ] && mkdir "${install}"
-cp "arquivos/${name}.yml" "${install}/docker-compose.yml"
-sudo adduser "${gusr}" docker
-cd "${install}"
-docker-compose up -d
+docker-compose -f "arquivos/${name}.yml" up -d
