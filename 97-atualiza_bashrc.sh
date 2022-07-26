@@ -20,4 +20,3 @@ sudo sed -i "s/<<TXT>>/${gmsg}/g" "${arr}"
 
 # reload ns arquivos de configuracao
 source "${arq}"
-source "${arr}"
