@@ -12,9 +12,9 @@ executa=1
 
 doSeparador "Updatedb..."
 
-exec="updatedb" #atualiza base do locate
+exec="sudo updatedb" #atualiza base do locate
 
-    doExecutar "${exec}" "${executa}" "locate"
+    doExecutar "${exec}" "0" "locate"
 
 # ----                    ---- #
 # ---- neofetch no inicio ---- #
@@ -24,7 +24,7 @@ doSeparador "Colocando myfetch no inicio..."
 
 arq="/etc/profile.d/mymotd.sh"
 
-exec="echo "neofetch" > ${arq} && chmod +x ${arq}"
+exec="sudo echo "neofetch" > ${arq} && sudo chmod +x ${arq}"
 
     doExecutar "${exec}" "${executa}" "neofetch"    
 
@@ -38,7 +38,7 @@ file="${gdir}/stress.sh"
 
 echo -e '#!/bin/bash\nstress --cpu 1 --timeout 300' > "${file}"
 chmod +x "${file}"
-chown "${gusr}.${gusr}" "${file}"
+#chown "${gusr}.${gusr}" "${file}"
 
 # ----                                 ---- #
 # ---- atualizando data local para BR  ---- #
@@ -46,6 +46,6 @@ chown "${gusr}.${gusr}" "${file}"
 
 doSeparador "Atualizando timezone..."
 
-mv /etc/localtime /etc/localtime.old
+sudo mv /etc/localtime /etc/localtime.old
 
-ln -s /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
+sudo ln -s /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime

@@ -5,7 +5,7 @@
 # ----        ---- #
 
 # ---- E root
-[ "${UID}" -eq "0" ] || { echo "Necessita ser root..."; exit 1; }
+# [ "${UID}" -eq "0" ] || { echo "Necessita ser root..."; exit 1; }
 
 # ---- tem internet
 goo="http://www.google.com.br/intl/en_com/images/srpr/logo1w.png"
@@ -24,12 +24,12 @@ export gusr="${3}" # usuário do /home que será utilizado para a distro (para d
 
 while true; do
     case "${4}" in
-        --java )        ./04-java.sh; shift ;;
-        --nodejs )      ./05-nodejs.sh; shift ;;
-        --ionic )       ./06-ionic.sh; shift ;;
-        --nginx )       ./07-nginx.sh; shift ;;
-        --vault )       ./08-vault.sh; shift ;;
-        --wp-docker)    ./09-wp-docker.sh; shift;;
+        --java )                ./04-java.sh; shift ;;
+        --nodejs )              ./05-nodejs.sh; shift ;;
+        --ionic )               ./06-ionic.sh; shift ;;
+        --nginx )               ./07-nginx.sh; shift ;;
+        --vault )               ./08-vault.sh; shift ;;
+        --wp-nginx-mysql-ssl)   ./09-docker-wp-nginx-mysql-ssl.sh; shift;;
         * ) break ;;
     esac
 done
