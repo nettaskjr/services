@@ -4,9 +4,6 @@
 # ---- TESTES ---- #
 # ----        ---- #
 
-# ---- E root
-# [ "${UID}" -eq "0" ] || { echo "Necessita ser root..."; exit 1; }
-
 # ---- tem internet
 goo="http://www.google.com.br/intl/en_com/images/srpr/logo1w.png"
 arq=$(basename "${goo}")

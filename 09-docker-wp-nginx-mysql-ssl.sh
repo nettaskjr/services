@@ -8,8 +8,8 @@ install="${gdir}/${name}"
 
 doSeparador "Instalando ${name}"
 
-#chown "${gusr}.${gusr} ${install}"
-cp "${gdir}/arquivos/${name}.yml ${install}/docker-compose.yml"
-adduser "${gdir}" docker
+[ ! -d "${install}" ] && mkdir "${install}"
+cp "arquivos/${name}.yml" "${install}/docker-compose.yml"
+sudo adduser "${gusr}" docker
 cd "${install}"
 docker-compose up -d
