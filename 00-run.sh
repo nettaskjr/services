@@ -17,8 +17,8 @@ while true; do
         --ionic )               ./06-ionic.sh; shift ;;
         --nginx )               ./07-nginx.sh; shift ;;
         --vault )               ./08-vault.sh; shift ;;
-        --wp-nginx-mysql-ssl)   ./09-docker-wp-nginx-mysql-ssl.sh; shift;;
-        * ) break ;;
+        #--wp-nginx-mysql-ssl)   ./09-docker-wp-nginx-mysql-ssl.sh; shift;;
+        * )                     [ -f "arquivos/${4}" ] && docker-compose -f "arquivos/${4}.yml" up -d || "yml inexistente";;
     esac
 done
 

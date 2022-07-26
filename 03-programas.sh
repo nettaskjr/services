@@ -21,6 +21,8 @@ apps="${apps} docker-compose"   # rotinas usando docker
 
 doApt "${apps}"
 
+sudo usermod -aG docker ${gusr} # adicionar o usuário ao grupo do docker
+
 doSeparador "Instalando aws-cli..."
 
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "/tmp/awscliv2.zip" 
