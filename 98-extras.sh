@@ -24,7 +24,7 @@ doSeparador "Colocando myfetch no inicio..."
 
 arq="/etc/profile.d/mymotd.sh"
 
-exec="sudo echo "neofetch" > ${arq} && sudo chmod +x ${arq}"
+exec="sudo echo 'neofetch' > ${arq} && sudo chmod +x ${arq}"
 
     doExecutar "${exec}" "${executa}" "neofetch"    
 
