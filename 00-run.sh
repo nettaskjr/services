@@ -18,7 +18,7 @@ while true; do
         --nginx )               ./07-nginx.sh; shift ;;
         --vault )               ./08-vault.sh; shift ;;
         #--wp-nginx-mysql-ssl)   ./09-docker-wp-nginx-mysql-ssl.sh; shift;;
-        * )                     [ -f "arquivos/${4}" ] && docker-compose -f "arquivos/${4}.yml" up -d || "yml inexistente";;
+        * )                     [ -f "arquivos/${4}" ] && docker-compose -f "arquivos/${4}.yml" up -d;;
     esac
 done
 
