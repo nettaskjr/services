@@ -2,7 +2,7 @@
 
 . 02-funcoes.sh
 
-name="docker-wp-nginx-mysql-ssl"
+name="wp-nginx-mysql-ssl"
 
 doSeparador "Instalando ${name}"
 
