@@ -22,6 +22,5 @@ while true; do
     esac
 done
 
-./97-atualiza_bashrc.sh #teste
-
+./97-atualiza_bashrc.sh
 ./98-extras.sh
