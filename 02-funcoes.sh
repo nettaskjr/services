@@ -45,6 +45,7 @@ function doInstalarGit() {
 }
 
 function doApt {
+    arq=${1} # lista de arquivos que devem ser instalados
     # DEBIAN_FRONTEND=noninteractive, neste modo, todas as perguntas no momento da instalação são respondidas com a opção padrão
-    sudo apt update && sudo DEBIAN_FRONTEND=noninteractive apt -yq dist-upgrade && sudo apt install -y ${1} && sudo apt -y autoremove
+    sudo apt update && sudo DEBIAN_FRONTEND=noninteractive apt -yq dist-upgrade && sudo apt install -y ${arq} && sudo apt -y autoremove
 }
