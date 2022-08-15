@@ -37,3 +37,7 @@ arquivo="terraform_${vs}_linux_amd64.zip"
 wget -c -P "/tmp" "https://releases.hashicorp.com/terraform/${vs}/${arquivo}" 
 cd /tmp && unzip ${arquivo} 
 sudo mv terraform "/usr/local/bin"
+
+doSeparador "Instalando heroku-cli"
+
+curl https://cli-assets.heroku.com/install.sh | sh
