@@ -30,11 +30,11 @@ services:
     environment:
       DEFAULT_EMAIL: nestor.junior@gmail.com
 
-  hello-world:
-    container_name: hello-world
-    image: kornkitti/express-hello-world
-    expose:
-      - "8080"
-    environment:
-      VIRTUAL_HOST: abpdf.tk
-      LETSENCRYPT_HOST: abpdf.tk
+  # hello-world:
+  #   container_name: hello-world
+  #   image: kornkitti/express-hello-world
+  #   expose:
+  #     - "8080"
+  #   environment:
+  #     VIRTUAL_HOST: abpdf.tk
+  #     LETSENCRYPT_HOST: abpdf.tk
