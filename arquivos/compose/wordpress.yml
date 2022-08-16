@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+  wordpress:
+    image: wordpress:latest
+    container_name: wordpress
+    restart: always
+  expose:
+    - "8080"     
+  environment:
+    WORDPRESS_DB_HOST: db:3306
+    WORDPRESS_DB_USER: wordpress
+    WORDPRESS_DB_PASSWORD: wordpress
+  volumes:
+    - ./wordpress.ini:/usr/local/etc/php/conf.d/wordpress.ini       
