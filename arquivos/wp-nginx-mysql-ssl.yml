@@ -67,7 +67,7 @@ services:
       volumes:
         - certbot-etc:/etc/letsencrypt
         - wordpress:/var/www/html
-      command: certonly --webroot --webroot-path=/var/www/html --email nestor.junior@gmail.com --agree-tos --no-eff-email --staging -d abpdf.tk -d www.abpdf.tk
+      command: certonly --webroot --webroot-path=/var/www/html --email nestor.junior@gmail.com --agree-tos --no-eff-email --force-renewal -d abpdf.tk -d www.abpdf.tk
 
 volumes:
   certbot-etc:
