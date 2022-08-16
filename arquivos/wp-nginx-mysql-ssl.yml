@@ -1,19 +1,19 @@
 version: '2'
 
 services:
-  db:
-    image: mysql:8.0
-    container_name: db
-    volumes:
-      - db_data:/var/lib/mysql
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: somewordpress
-      MYSQL_DATABASE: wordpress
-      MYSQL_USER: wordpress
-      MYSQL_PASSWORD: wordpress
-    networks:
-      - app-network
+  # db:
+  #   image: mysql:8.0
+  #   container_name: db
+  #   volumes:
+  #     - db_data:/var/lib/mysql
+  #   restart: always
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: somewordpress
+  #     MYSQL_DATABASE: wordpress
+  #     MYSQL_USER: wordpress
+  #     MYSQL_PASSWORD: wordpress
+  #   networks:
+  #     - app-network
        
   # phpmyadmin:
   #     image: phpmyadmin/phpmyadmin
@@ -28,21 +28,21 @@ services:
   #     volumes:
   #       - ./wordpress.ini:/usr/local/etc/php/conf.d/php-phpmyadmin.ini       
    
-  wordpress:
-    depends_on:
-      - db
-    image: wordpress:latest
-    container_name: wordpress
-    restart: always
-    environment:
-      WORDPRESS_DB_HOST: db:3306
-      WORDPRESS_DB_USER: wordpress
-      WORDPRESS_DB_PASSWORD: wordpress
-    volumes:
-      - ./wordpress.ini:/usr/local/etc/php/conf.d/wordpress.ini
-      - wordpress:/var/www/html
-    networks:
-      - app-network
+  # wordpress:
+  #   depends_on:
+  #     - db
+  #   image: wordpress:latest
+  #   container_name: wordpress
+  #   restart: always
+  #   environment:
+  #     WORDPRESS_DB_HOST: db:3306
+  #     WORDPRESS_DB_USER: wordpress
+  #     WORDPRESS_DB_PASSWORD: wordpress
+  #   volumes:
+  #     - ./wordpress.ini:/usr/local/etc/php/conf.d/wordpress.ini
+  #     - wordpress:/var/www/html
+  #   networks:
+  #     - app-network
 
   webserver:
     depends_on:
@@ -52,8 +52,8 @@ services:
     restart: always
     ports: 
       - "80:80"
-    # volumes:
-    #   - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
     networks:
       - app-network    
 
