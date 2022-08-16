@@ -57,18 +57,18 @@ services:
     networks:
       - app-network    
 
-  certbot:
-      depends_on:
-        - webserver
-      image: certbot/certbot
-      container_name: certbot
-      volumes:
-        - certbot-etc:/etc/letsencrypt
-        - wordpress:/var/www/html
-      command: certonly --webroot --webroot-path=/var/www/html --email nestor.junior@gmail.com --agree-tos --no-eff-email --force-renewal -d abpdf.tk -d www.abpdf.tk
+  # certbot:
+  #     depends_on:
+  #       - webserver
+  #     image: certbot/certbot
+  #     container_name: certbot
+  #     volumes:
+  #       - certbot-etc:/etc/letsencrypt
+  #       - wordpress:/var/www/html
+  #     command: certonly --webroot --webroot-path=/var/www/html --email nestor.junior@gmail.com --agree-tos --no-eff-email --force-renewal -d abpdf.tk -d www.abpdf.tk
 
 volumes:
-  certbot-etc:
+  # certbot-etc:
   wordpress:
   db_data:
 
