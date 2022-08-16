@@ -2,8 +2,8 @@ version: '2'
 
 service:
   wordpress:
-    image: wordpress:latest
     container_name: wordpress
+    image: wordpress:latest
     restart: unless-stopped
     expose:
       - "8080"     
