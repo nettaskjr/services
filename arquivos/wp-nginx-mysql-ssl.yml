@@ -52,8 +52,8 @@ services:
     restart: always
     ports: 
       - "80:80"
-    volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
+    # volumes:
+    #   - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
     networks:
       - app-network    
 
@@ -70,7 +70,7 @@ services:
 volumes:
   # certbot-etc:
   wordpress:
-  db_data:
+  # db_data:
 
 networks:
   app-network:
