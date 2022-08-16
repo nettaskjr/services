@@ -3,6 +3,7 @@ version: '2'
 services:
    wordpress:
      image: wordpress:latest
+     container_name: wordpress
      restart: always
      environment:
        WORDPRESS_DB_HOST: db:3306
