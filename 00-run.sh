@@ -18,7 +18,7 @@ while true; do
         --nginx )               ./07-nginx.sh; shift ;;
         --vault )               ./08-vault.sh; shift ;;
         --nginx-ssl)            ./09-nginx-ssl.sh; shift ;;
-        * )                     break;; #[ -f "echo arquivos/echo "${4}" | sed 's/--//g'" ] && docker-compose -f "arquivos/${4}.yml" up -d;;
+        * )                     break ;; #[ -f "echo arquivos/echo "${4}" | sed 's/--//g'" ] && docker-compose -f "arquivos/${4}.yml" up -d;;
     esac
 done
 
