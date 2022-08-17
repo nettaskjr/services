@@ -40,7 +40,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - /var/docker/nginx/acme:/etc/acme.sh
     environment:
-      DEFAULT_EMAIL: nestor.junior@gmail.com
+      DEFAULT_EMAIL: <<EMAIL>>
 
   wordpress:
     image: wordpress:latest
@@ -51,8 +51,8 @@ services:
     expose:
       - "8080"     
     environment:
-      VIRTUAL_HOST: abpdf.tk
-      LETSENCRYPT_HOST: abpdf.tk    
+      VIRTUAL_HOST: <<HOST>>
+      LETSENCRYPT_HOST: <<HOST>>    
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: wordpress

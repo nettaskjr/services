@@ -3,6 +3,7 @@
 export gmsg="${1}" # mensagem que será apresentada no prompt
 export gdns="${2}" # endereco de dns que para o site ex.: example.com.br
 export gusr="${3}" # usuário do /home que será utilizado para a distro (para debian o padrao é: admin )
+export geml="${4}" # email do usuário (ex de uso: certbot)
 
 # ----          ---- #
 # ---- EXECUCAO ---- #
@@ -11,7 +12,7 @@ export gusr="${3}" # usuário do /home que será utilizado para a distro (para d
 ./03-programas.sh
 
 while true; do
-    case "${4}" in
+    case "${5}" in
         --java )                ./04-java.sh; shift ;;
         --nodejs )              ./05-nodejs.sh; shift ;;
         --ionic )               ./06-ionic.sh; shift ;;

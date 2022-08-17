@@ -2,8 +2,13 @@
 
 . 02-funcoes.sh
 
-name="wp-sql-nginx-ssl"
+file="wp-sql-nginx-ssl"
 
-doSeparador "Instalando ${name}"
+doSeparador "Instalando ${file}"
 
-sudo docker-compose -f "arquivos/${name}.yml" up -d
+# atualiza as informações para geração do certificado SSL
+sed -i "s/<<EMAIL>>/${geml}/g" "${file}"
+sed -i "s/<<HOST>>/${gdns}/g" "${file}"
+sed -i "s/<<HOST>>/${gdns}/g" "${file}"
+
+sudo docker-compose -f "arquivos/${file}.yml" up -d
