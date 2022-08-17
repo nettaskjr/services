@@ -17,7 +17,7 @@ while true; do
         --ionic )               ./06-ionic.sh; shift ;;
         --nginx )               ./07-nginx.sh; shift ;;
         --vault )               ./08-vault.sh; shift ;;
-        --nginx-ssl)            ./09-nginx-ssl.sh; shift ;;
+        --wp-sql-nginx-ssl)     ./09-wp-sql-nginx-ssl; shift ;;
         * )                     break ;; #[ -f "echo arquivos/echo "${4}" | sed 's/--//g'" ] && docker-compose -f "arquivos/${4}.yml" up -d;;
     esac
 done

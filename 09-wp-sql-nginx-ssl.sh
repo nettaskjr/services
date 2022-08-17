@@ -2,7 +2,7 @@
 
 . 02-funcoes.sh
 
-name="nginx-ssl"
+name="wp-sql-nginx-ssl"
 
 doSeparador "Instalando ${name}"
 
