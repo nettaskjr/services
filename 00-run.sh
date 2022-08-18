@@ -5,6 +5,15 @@ export gdns="${2}" # endereco de dns que para o site ex.: example.com.br
 export gusr="${3}" # usuário do /home que será utilizado para a distro (para debian o padrao é: admin )
 export geml="${4}" # email do usuário (ex de uso: certbot)
 
+export ghome="/home/${gusr}"  # pasta do usuário
+
+# ----                   ---- #
+# ---- pasta de projetos ---- #
+# ----                   ---- #
+export gdir="${ghome}/projetos"
+
+[ ! -d "${gdir}" ] && mkdir "${gdir}" # se não existe a pasta projetos, crie!
+
 # ----          ---- #
 # ---- EXECUCAO ---- #
 # ----          ---- #
