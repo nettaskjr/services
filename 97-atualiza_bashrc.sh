@@ -1,7 +1,6 @@
 #/bin/bash
 
-#. 01-var.sh
-#. 02-funcoes.sh
+. 01-funcoes.sh
 
 doSeparador "Configurando bashrc.."
 

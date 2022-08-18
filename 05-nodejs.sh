@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#. 02-funcoes.sh
+. 01-funcoes.sh
 
 doSeparador "Repositorio do NodeJs..."
 vs=18

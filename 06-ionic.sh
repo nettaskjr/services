@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#. 02-funcoes.sh
+. 01-funcoes.sh
 
 # instalando o nodejs
 ./05-nodejs.sh
