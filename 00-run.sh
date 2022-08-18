@@ -9,7 +9,7 @@ export geml="${4}" # email do usuário (ex de uso: certbot)
 # ---- EXECUCAO ---- #
 # ----          ---- #
 
-# ./03-programas.sh
+./03-programas.sh
 
 while true; do
     case "${5}" in
