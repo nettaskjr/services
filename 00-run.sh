@@ -1,5 +1,7 @@
 #!/bin/bash
 
+. 01-funcoes.sh
+
 export gmsg="${1}" # mensagem que será apresentada no prompt
 export gdns="${2}" # endereco de dns que para o site ex.: example.com.br
 export gusr="${3}" # usuário do /home que será utilizado para a distro (para debian o padrao é: admin )
@@ -18,7 +20,7 @@ export gdir="${ghome}/projetos"
 # ---- EXECUCAO ---- #
 # ----          ---- #
 
-./03-programas.sh
+./02-programas.sh
 
 while true; do
     case "${5}" in

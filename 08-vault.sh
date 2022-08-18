@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #. 01-var.sh
-. 02-funcoes.sh
+#. 02-funcoes.sh
 
 doSeparador "Repositorio do Vault..."
 curl -fsSL https://apt.releases.hashicorp.com/gpg | apt-key add -

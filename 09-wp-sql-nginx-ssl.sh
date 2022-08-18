@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. 02-funcoes.sh
+#. 02-funcoes.sh
 
 txt="wp-sql-nginx-ssl"
 file="arquivos/${txt}.yml"

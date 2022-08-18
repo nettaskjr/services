@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. 02-funcoes.sh
+#. 02-funcoes.sh
 
 doSeparador "Instalando o nginx..."
 
