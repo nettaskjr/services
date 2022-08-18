@@ -12,4 +12,4 @@ sed -i "s/<<EMAIL>>/${geml}/g" "${file}"
 sed -i "s/<<HOST>>/${gdns}/g" "${file}"
 sed -i "s/<<HOST>>/${gdns}/g" "${file}"
 
-sudo docker-compose -f "${file}" up -d
+#sudo docker-compose -f "${file}" up -d
