@@ -3,9 +3,7 @@
 . 02-funcoes.sh
 
 txt="wp-sql-nginx-ssl"
-echo ${txt}
 file="arquivos/${txt}.yml"
-echo ${file}
 
 doSeparador "Instalando ${txt}"
 
