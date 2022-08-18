@@ -1,6 +1,7 @@
 #!/bin/bash
 
 . 01-funcoes.sh
+. 03-docker.sh
 
 txt="wp-sql-nginx-ssl"
 file="arquivos/${txt}.yml"
