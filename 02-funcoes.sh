@@ -1,7 +1,5 @@
 #!/bin/bash
 
-. 01-var.sh
-
 function doInstalado() {
     app=$1 # aplivativo a ser verificado se esta instalado (1) ou não (0)
     [ $(which "${app}" 2>/dev/null) ] && echo 1 || echo 0
