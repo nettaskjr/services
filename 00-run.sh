@@ -22,6 +22,7 @@ export gdir="${ghome}/projetos"
 
 while true; do
     case "${5}" in
+        --docker )              ./03-docker.sh shift ;;
         --java )                ./04-java.sh; shift ;;
         --nodejs )              ./05-nodejs.sh; shift ;;
         --ionic )               ./06-ionic.sh; shift ;;
