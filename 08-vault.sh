@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. 01-var.sh
+#. 01-var.sh
 . 02-funcoes.sh
 
 doSeparador "Repositorio do Vault..."
