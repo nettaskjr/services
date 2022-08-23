@@ -1,9 +1,7 @@
 #!/bin/bash
 
 . 01-funcoes.sh
-
-# instalando o nodejs
-./05-nodejs.sh
+. 05-nodejs.sh
 
 doSeparador "Instalando aplicativos Ionic e Cordova..." 
 
