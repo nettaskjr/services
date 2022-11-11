@@ -15,6 +15,5 @@ apps="${apps} htop"             # um top metido a besta
 apps="${apps} stress"           # script de teste de stress para o servidor
 apps="${apps} curl"             # cliente URL
 apps="${apps} wget"             # ferramenta de download
-apps="${apps} usermod"          # gerenciamento de usuarios
 
 doApt "${apps}"
