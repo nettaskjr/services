@@ -18,6 +18,8 @@ export gdir="${ghome}/projetos"
 # ---- EXECUCAO ---- #
 # ----          ---- #
 
+# sudo ./00-run.sh "my-desktop" "127.0.0.1" "nestor" "nestor.junior@gmail.com" "--terraform"
+
 ./02-programas.sh
 
 while true; do
