@@ -4,7 +4,7 @@
 
 doSeparador "Instalando terraform..."
 
-vs="1.2.5" 
+vs="1.3.7" 
 arquivo="terraform_${vs}_linux_amd64.zip" 
 
 wget -c -P "/tmp" "https://releases.hashicorp.com/terraform/${vs}/${arquivo}" 
