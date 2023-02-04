@@ -30,7 +30,9 @@ while true; do
         --ionic )               ./06-ionic.sh; shift ;;
         --nginx )               ./07-nginx.sh; shift ;;
         --vault )               ./08-vault.sh; shift ;;
-        --wp-sql-nginx-ssl)     ./09-wp-sql-nginx-ssl.sh; shift ;;
+        --wp-sql-nginx-ssl )    ./09-wp-sql-nginx-ssl.sh; shift ;;
+        --wp-nginx-ssl )        ./10-wp-nginx-ssl.sh; shift ;; #[ ]criar futuramente
+        --desktop )             ./20-desktop.sh; shift ;; #[ ]criar futuramente
         --terraform )           ./87-terraform.sh; shift ;;
         --heroku-cli )          ./88-heroku-cli.sh; shift ;;
         --aws-cli )             ./89-aws-cli.sh; shift ;;

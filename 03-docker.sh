@@ -4,6 +4,10 @@
 
 doSeparador "Instalando docker e docker-compose..."
 
+# [ ]nova instalação do docker a testar
+#sudo apt-get remove docker docker-engine docker.io containerd runc
+
+
 apps="docker.io"                # container
 apps="${apps} docker-compose"   # rotinas usando docker
 
