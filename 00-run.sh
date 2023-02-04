@@ -33,7 +33,7 @@ while true; do
         --wp-sql-nginx-ssl)     ./09-wp-sql-nginx-ssl.sh; shift ;;
         --terraform )           ./87-terraform.sh; shift ;;
         --heroku-cli )          ./88-heroku-cli.sh; shift ;;
-        --aws-cli )             ./89.aws-cli.sh; shift ;;
+        --aws-cli )             ./89-aws-cli.sh; shift ;;
         * )                     break ;; #[ -f "echo arquivos/echo "${4}" | sed 's/--//g'" ] && docker-compose -f "arquivos/${4}.yml" up -d;;
     esac
 done
