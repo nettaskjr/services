@@ -4,7 +4,6 @@
 # ----  INFO DO BANCO DE DADOS  ---- #
 # ----        OPCIONAL          ---- #
 # ----                          ---- #
-
 while getopts ":n:e:u:p:" option; do
     # n - nome do banco de dados
     # e - endereço do banco de dados
@@ -20,6 +19,9 @@ done
 
 shift $(($OPTIND -1))
 
+# ----                              ---- #
+# ----    DADOS PASSADOS POR PARAM  ---- #
+# ----                              ---- #
 export gmsg="${1}" # mensagem que será apresentada no prompt
 export gdns="${2}" # endereco de dns que para o site ex.: example.com.br
 export gusr="${3}" # usuário do /home que será utilizado para a distro (para debian o padrao é: admin )
