@@ -10,8 +10,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: somewordpress
       MYSQL_DATABASE: wordpress
-      MYSQL_USER: wordpress
-      MYSQL_PASSWORD: wordpress
+      MYSQL_USER: <<USER_DB>>
+      MYSQL_PASSWORD: <<PWD_DB>>
 
   nginx:
     container_name: nginx
@@ -54,8 +54,8 @@ services:
       VIRTUAL_HOST: <<HOST>>
       LETSENCRYPT_HOST: <<HOST>>    
       WORDPRESS_DB_HOST: db:3306
-      WORDPRESS_DB_USER: wordpress
-      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_USER: <<USER_DB>>
+      WORDPRESS_DB_PASSWORD: <<PWD_DB>>
     volumes:
       - ./wordpress.ini:/usr/local/etc/php/conf.d/wordpress.ini      
 

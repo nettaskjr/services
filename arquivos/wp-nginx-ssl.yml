@@ -1,18 +1,6 @@
 version: '2'
 
 services:
-  db:
-    container_name: db
-    image: mysql:5.7
-    volumes:
-      - db_data:/var/lib/mysql
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: somewordpress
-      MYSQL_DATABASE: wordpress
-      MYSQL_USER: wordpress
-      MYSQL_PASSWORD: wordpress
-
   nginx:
     container_name: nginx
     image: nginxproxy/nginx-proxy
@@ -40,7 +28,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - /var/docker/nginx/acme:/etc/acme.sh
     environment:
-      DEFAULT_EMAIL: nestor.junior@gmail.com
+      DEFAULT_EMAIL: <<EMAIL>>
 
   wordpress:
     image: wordpress:latest
@@ -51,11 +39,12 @@ services:
     expose:
       - "8080"     
     environment:
-      VIRTUAL_HOST: abpdf.tk
-      LETSENCRYPT_HOST: abpdf.tk    
-      WORDPRESS_DB_HOST: db:3306
-      WORDPRESS_DB_USER: wordpress
-      WORDPRESS_DB_PASSWORD: wordpress
+      VIRTUAL_HOST: <<HOST>>
+      LETSENCRYPT_HOST: <<HOST>>
+      WORDPRESS_DB_HOST: <<DB>>:3306
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_USER: <<USER_DB>>
+      WORDPRESS_DB_PASSWORD: <<PWD_DB>>
     volumes:
       - ./wordpress.ini:/usr/local/etc/php/conf.d/wordpress.ini      
 
