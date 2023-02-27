@@ -1,5 +1,25 @@
 #!/bin/bash
 
+# ----                          ---- #
+# ----  INFO DO BANCO DE DADOS  ---- #
+# ----        OPCIONAL          ---- #
+# ----                          ---- #
+
+while getopts ":n:e:u:p:" option; do
+    # n - nome do banco de dados
+    # e - endereço do banco de dados
+    # u - usuário
+    # p - senha
+    case "${option}" in
+        n ) export gndb=${OPTARG} ;;
+        e ) export gedb=${OPTARG} ;;
+        u ) export gudb=${OPTARG} ;;
+        p ) export gpdb=${OPTARG} ;;
+    esac
+done
+
+shift $(($OPTIND -1))
+
 export gmsg="${1}" # mensagem que será apresentada no prompt
 export gdns="${2}" # endereco de dns que para o site ex.: example.com.br
 export gusr="${3}" # usuário do /home que será utilizado para a distro (para debian o padrao é: admin )
@@ -14,11 +34,11 @@ export gdir="${ghome}/projetos"
 
 [ ! -d "${gdir}" ] && mkdir "${gdir}" # se não existe a pasta projetos, crie!
 
-# ----          ---- #
-# ---- EXECUCAO ---- #
-# ----          ---- #
+# # ----          ---- #
+# # ---- EXECUCAO ---- #
+# # ----          ---- #
 
-# sudo ./00-run.sh "my-desktop" "127.0.0.1" "nestor" "nestor.junior@gmail.com" "--terraform"
+# sudo ./00-run.sh my-desktop 127.0.0.1 nestor nestor.junior@gmail.com --terraform --aws-cli
 
 ./02-programas.sh
 
