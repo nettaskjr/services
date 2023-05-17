@@ -7,8 +7,8 @@
 while getopts ":n:e:u:p:" option; do
     # n - nome do banco de dados
     # e - endereço do banco de dados
-    # u - usuário
-    # p - senha
+    # u - usuário do banco de dados
+    # p - senha do banco de dados
     case "${option}" in
         n ) export gndb=${OPTARG} ;;
         e ) export gedb=${OPTARG} ;;
