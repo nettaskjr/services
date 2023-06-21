@@ -5,15 +5,11 @@
 # ----        OPCIONAL          ---- #
 # ----                          ---- #
 while getopts ":n:e:u:p:" option; do
-    # n - nome do banco de dados
-    # e - endereço do banco de dados
-    # u - usuário do banco de dados
-    # p - senha do banco de dados
     case "${option}" in
-        n ) export gndb=${OPTARG} ;;
-        e ) export gedb=${OPTARG} ;;
-        u ) export gudb=${OPTARG} ;;
-        p ) export gpdb=${OPTARG} ;;
+        n ) export gndb=${OPTARG} ;; # nome do banco de dados
+        e ) export gedb=${OPTARG} ;; # endereço do banco de dados
+        u ) export gudb=${OPTARG} ;; # usuário do banco de dados
+        p ) export gpdb=${OPTARG} ;; # senha do banco de dados
     esac
 done
 
