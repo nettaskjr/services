@@ -2,3 +2,4 @@
 2 - Criar modo desktop
 3 - Atualizar a instalação para o docker
 4 - Fazer a análise da melhor forma para instalar os aplicativos
+5 - inserir o wp-cli no wordpress
