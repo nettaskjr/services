@@ -10,7 +10,7 @@ arr="/root/.bashrc"
 per="644"
 
 # copia para pasta home
-cp "${fil}" "${arq}" && chown "${gusr}.${gusr}" "${arq}" && chmod "${per}" "${arq}"
+cp "${fil}" "${arq}" && chown "${gusr}:${gusr}" "${arq}" && chmod "${per}" "${arq}"
 sed -i "s/<<TXT>>/${gmsg}/g" "${arq}"
 
 # copia para pasta root

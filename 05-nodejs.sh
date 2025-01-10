@@ -3,7 +3,7 @@
 . 01-funcoes.sh
 
 doSeparador "Repositorio do NodeJs..."
-vs=18
+vs=22
 
 curl -sL https://deb.nodesource.com/setup_${vs}.x | bash -
 
