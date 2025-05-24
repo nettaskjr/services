@@ -51,8 +51,7 @@ while true; do
         --wp-sql-nginx-ssl )    ./09-wp-sql-nginx-ssl.sh; shift ;;
         --wp-nginx-ssl )        ./10-wp-nginx-ssl.sh; shift ;; #[ ]criar futuramente
         --desktop )             ./20-desktop.sh; shift ;; #[ ]criar futuramente
-        --wsl )                 ./30-wsl.sh; shift ;;
-        --oci )                 ./86-oci-cli.sh; shift ;;
+        --oci-cli )             ./86-oci-cli.sh; shift ;;
         --terraform )           ./87-terraform.sh; shift ;;
         --heroku-cli )          ./88-heroku-cli.sh; shift ;;
         --aws-cli )             ./89-aws-cli.sh; shift ;;
