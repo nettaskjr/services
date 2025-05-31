@@ -1,0 +1,29 @@
+name: Deploy Shell Script Package of service
+
+on:
+  push:
+    tags:
+      - 'v*' # Dispara o workflow quando uma tag começando com 'v' é enviada (ex: v1.0, v1.2.3)
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Empacotar scripts
+        run: |
+          mkdir release_package
+          cp * release_package/ # Copia seus scripts para um diretório de release
+          # Adicione outros arquivos necessários ao pacote, se houver
+          tar -czvf shell_scripts_v${{ github.ref_name }}.tar.gz release_package/
+        # O comando acima cria um arquivo .tar.gz com os scripts.
+        # ${{ github.ref_name }} pega o nome da tag (ex: v1.0).
+
+      - name: Criar Release no GitHub
+        uses: softprops/action-gh-release@v1
+        with:
+          files: shell_scripts_v${{ github.ref_name }}.tar.gz # Anexa o pacote à release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
